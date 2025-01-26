@@ -1,23 +1,18 @@
 {
-    "version": 2,
-    "builds": [
+  "version": 2,
+  "builds": [
       {
-        "src": "src/main.ts",
-        "use": "@vercel/node"
+          "src": "dist/main.js",
+          "use": "@vercel/node"
       }
-    ],
-    "routes": [
+  ],
+  "routes": [
       {
-        "src": "/api/(.*)",
-        "dest": "src/main.ts"
-      },
-      {
-        "src": "/(.*)",
-        "dest": "src/main.ts",
-        "methods": ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"]
+          "src": "/(.*)",
+          "dest": "dist/main.js"
       }
-    ],
-    "env": {
-      "NODE_ENV": "production"
-    }
+  ],
+  "env": {
+      "DATABASE_URL": "postgresql://postgres.gnneoathixbmqupmzpgb:jFsLFkeri0kskSU8@aws-0-eu-central-1.pooler.supabase.com:5432/postgres"
   }
+}
