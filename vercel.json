@@ -1,18 +1,18 @@
 {
   "version": 2,
   "builds": [
-      {
-          "src": "dist/main.js",
-          "use": "@vercel/node"
-      }
+    {
+      "src": "dist/src/main.js",
+      "use": "@vercel/node"
+    }
   ],
   "routes": [
-      {
-          "src": "/(.*)",
-          "dest": "dist/main.js"
-      }
+    {
+      "src": "/(.*)",
+      "dest": "dist/src/main.js"
+    }
   ],
   "env": {
-      "DATABASE_URL": "postgresql://postgres.gnneoathixbmqupmzpgb:jFsLFkeri0kskSU8@aws-0-eu-central-1.pooler.supabase.com:5432/postgres"
+    "DATABASE_URL": "postgresql://postgres.gnneoathixbmqupmzpgb:jFsLFkeri0kskSU8@aws-0-eu-central-1.pooler.supabase.com:5432/postgres"
   }
 }
